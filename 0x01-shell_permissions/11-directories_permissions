@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod a+x {$PWD}
+find . -type d -print | xargs -I {} chmod o+x {}
