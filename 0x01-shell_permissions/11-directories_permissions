@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -print | xargs -I {} chmod o+x {}
+find . -type d -print | xargs -I {} chmod a+x {}
