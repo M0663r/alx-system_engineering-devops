@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -empty -print; find . -type f -size 0 -print
+find . ! -name '*' -print  find . -type f -name '*' -size 0 -print
