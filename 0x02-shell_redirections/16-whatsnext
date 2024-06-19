@@ -1,2 +1,2 @@
 #!/bin/bash
-grep 'root' /etc/passwd | awk '{print; NR<=4}'
+grep 'root' /etc/passwd | head -n 1 | tr '\n' ' ' | paste -sd ' ' /etc/passwd | cut -d ' ' -f2-
