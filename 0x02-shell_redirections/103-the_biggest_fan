@@ -1,2 +1,2 @@
 #!/bin/bash
-awk -F'\t' '{count[$1]++} END { for (i=0; i<11; i++) { max=0; for (host in count) { if (count[host] > max) { max=count[host]; who=host } }; printf "%s\n", who; delete count[who] } }' file
+sort -k1 file | cut -d$'\t' -f1 | uniq -c | sort -nr | head -n 11
