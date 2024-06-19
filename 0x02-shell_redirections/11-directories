@@ -1,0 +1,2 @@
+#!/bin/bash
+shopt -s nullglob; echo "$(find . -type d ! -path . -prune ! -path .. -prune | wc -l)"
