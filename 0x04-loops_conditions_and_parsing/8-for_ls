@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script displays the content of the current directory in a list format,
+# showing only the part of the name after the first dash, excluding hidden files
+
+for file in *; do
+  # Check if the file contains a dash
+  if [[ "$file" == *-* ]]; then
+    echo "${file#*-}"
+  else
+    echo "$file"
+  fi
+done
+
